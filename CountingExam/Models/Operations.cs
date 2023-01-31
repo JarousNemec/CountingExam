@@ -2,9 +2,12 @@
 {
     public enum Operations
     {
-        Plus = 1,
-        Minus = 2,
-        Divide = 4,
-        Times = 3
+        Plus = 0,
+        Minus = 1,
+        Divide = 2,
+        Times = 3,
+        Power = 4,
+        SquareRoot = 5,
+        Modulo = 6
     }
 }

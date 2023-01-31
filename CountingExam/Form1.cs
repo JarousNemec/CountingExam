@@ -26,10 +26,10 @@ namespace CountingExam
             _setupControl.Show();
         }
 
-        private void SetupControlOnOnCountingStart(List<CountingAction> actions)
+        private void SetupControlOnOnCountingStart(List<CountingAction> actions, Settings settings)
         {
             _setupControl.Hide();
-            _countingControl.Start(actions);
+            _countingControl.Start(actions, settings);
             _countingControl.Show();
         }
     }

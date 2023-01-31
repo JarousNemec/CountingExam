@@ -35,24 +35,26 @@ namespace CountingExam.Controls
             this._countingLabel = new System.Windows.Forms.Label();
             this._btnShow = new System.Windows.Forms.Button();
             this._timer = new System.Windows.Forms.Timer(this.components);
+            this._lblOrder = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // _countingLabel
             // 
-            this._countingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._countingLabel.Location = new System.Drawing.Point(24, 10);
+            this._countingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._countingLabel.Location = new System.Drawing.Point(46, 85);
             this._countingLabel.Name = "_countingLabel";
-            this._countingLabel.Size = new System.Drawing.Size(534, 273);
+            this._countingLabel.Size = new System.Drawing.Size(378, 108);
             this._countingLabel.TabIndex = 0;
             this._countingLabel.Text = "---";
             this._countingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // _btnShow
             // 
+            this._btnShow.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this._btnShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._btnShow.Location = new System.Drawing.Point(48, 297);
+            this._btnShow.Location = new System.Drawing.Point(46, 301);
             this._btnShow.Name = "_btnShow";
-            this._btnShow.Size = new System.Drawing.Size(486, 113);
+            this._btnShow.Size = new System.Drawing.Size(378, 85);
             this._btnShow.TabIndex = 1;
             this._btnShow.Text = "Show";
             this._btnShow.UseVisualStyleBackColor = true;
@@ -63,16 +65,28 @@ namespace CountingExam.Controls
             this._timer.Interval = 3000;
             this._timer.Tick += new System.EventHandler(this._timer_Tick);
             // 
+            // _lblOrder
+            // 
+            this._lblOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblOrder.Location = new System.Drawing.Point(3, 0);
+            this._lblOrder.Name = "_lblOrder";
+            this._lblOrder.Size = new System.Drawing.Size(100, 33);
+            this._lblOrder.TabIndex = 2;
+            this._lblOrder.Text = "-";
+            // 
             // CountingControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this._lblOrder);
             this.Controls.Add(this._btnShow);
             this.Controls.Add(this._countingLabel);
             this.Name = "CountingControl";
-            this.Size = new System.Drawing.Size(574, 586);
+            this.Size = new System.Drawing.Size(476, 512);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label _lblOrder;
 
         private System.Windows.Forms.Timer _timer;
 
